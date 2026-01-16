@@ -1,0 +1,26 @@
+# --- Maven ---
+target/
+
+# --- IDEs (IntelliJ, Eclipse, VS Code) ---
+.idea/
+.mvn/
+.project
+.classpath
+.settings/
+
+# --- Logs y Reportes ---
+test-output/
+extent-reports/
+screenshots/
+
+
+# --- Ejecutables y Drivers ---
+*.exe
+*.dll
+*.so
+*.dylib
+drivers/
+bin/
+
+# --- Secretos y Configuración Local ---
+.env

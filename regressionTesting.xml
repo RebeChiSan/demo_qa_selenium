@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Regression Suite Test">
+    <test name="Buttons Test">
+        <classes>
+            <class name="Tests.Elements.Buttons"/>
+        </classes>
+    </test>
+
+    <test name="Checkbox Test">
+        <classes>
+            <class name="Tests.Elements.Checkbox"/>
+        </classes>
+    </test>
+
+    <test name="Radio Button Test">
+        <classes>
+            <class name="Tests.Elements.RadioButton"/>
+        </classes>
+    </test>
+
+    <test name="TextBox Test">
+        <classes>
+            <class name="Tests.Elements.Textbox"/>
+        </classes>
+    </test>
+
+    <test name="Web Tables Test">
+        <classes>
+            <class name="Tests.Elements.WebTables"/>
+        </classes>
+    </test>
+
+    <test name="Upload Download Test">
+        <classes>
+            <class name="Tests.Elements.UploadDownload"/>
+        </classes>
+    </test>
+
+    <test name="Dynamic Properties Test">
+        <classes>
+            <class name="Tests.Elements.DynamicProperties"/>
+        </classes>
+    </test>
+
+    <test name="Broken Links Images Test">
+        <classes>
+            <class name="Tests.Elements.BrokenLinksImages"/>
+        </classes>
+    </test>
+
+    <test name="Links Validation Test">
+        <classes>
+            <class name="Tests.Elements.Links"/>
+        </classes>
+    </test>
+
+    <test name="Alerts Test">
+        <classes>
+            <class name="Tests.AlertsFrameWindows.Alerts"/>
+        </classes>
+    </test>
+
+    <test name="Windows Test">
+        <classes>
+            <class name="Tests.AlertsFrameWindows.BrowserWindows"/>
+        </classes>
+    </test>
+
+    <test name="Frames Test">
+        <classes>
+            <class name="Tests.AlertsFrameWindows.Frames"/>
+        </classes>
+    </test>
+
+    <test name="Modals Test">
+        <classes>
+            <class name="Tests.AlertsFrameWindows.ModalDialogs"/>
+        </classes>
+    </test>
+
+    <test name="Nested Frames Test">
+        <classes>
+            <class name="Tests.AlertsFrameWindows.NestedFrames"/>
+        </classes>
+    </test>
+
+    <test name="Form Test">
+        <classes>
+            <class name="Tests.Forms.PracticeForm"/>
+        </classes>
+    </test>
+
+    <test name="Accordion Test">
+        <classes>
+            <class name="Tests.Widgets.Accordion"/>
+        </classes>
+    </test>
+
+    <test name="Date picker Test">
+        <classes>
+            <class name="Tests.Widgets.DatePicker"/>
+        </classes>
+    </test>
+
+    <test name="Tabs Test">
+        <classes>
+            <class name="Tests.Widgets.Tabs"/>
+        </classes>
+    </test>
+
+    <test name="Tooltips Test">
+        <classes>
+            <class name="Tests.Widgets.ToolTips"/>
+        </classes>
+    </test>
+</suite>
