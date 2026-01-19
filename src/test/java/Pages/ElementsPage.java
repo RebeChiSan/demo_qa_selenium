@@ -537,9 +537,6 @@ public class ElementsPage extends BasePage {
 	@FindBy(linkText = "Click Here for Broken Link")
 	WebElement brokenLink;
 
-    @FindBy( css = "div[class='example'] p" )
-    WebElement statusText;
-
     public String getValidHref() {
         return getAttribute(validLink, "href");
 	}
@@ -562,7 +559,7 @@ public class ElementsPage extends BasePage {
 	        URI uri = new URI(linkUrl);
 	        URL url = uri.toURL();
 	        connection = (HttpURLConnection) url.openConnection();
-	        connection.setRequestMethod("HEAD");
+	        connection.setRequestMethod("GET");
 	        return connection.getResponseCode();
 	    } catch (Exception e) {
 	        return 500;

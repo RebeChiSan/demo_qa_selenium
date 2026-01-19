@@ -55,18 +55,6 @@ public class WidgetsPage extends BasePage {
         clickWithJs(accordion3Heading);
     }
 
-    public boolean isAccordion1ContentVisible() {
-            return isElementDisplayedWithWait(accordion1Content);
-    }
-
-    public boolean isAccordion2ContentVisible() {
-            return isElementDisplayedWithWait(accordion2Content);
-    }
-
-    public boolean isAccordion3ContentVisible() {
-            return isElementDisplayedWithWait(accordion3Content);
-    }
-
     public String getAccordion1Content() {
         return forceGetText(accordion1Content);
     }
@@ -203,22 +191,6 @@ public class WidgetsPage extends BasePage {
     @FindBy(xpath = "//div[@class='tooltip-inner']")
     WebElement toolTip;
 
-    @FindBy(id = "texToolTopContainer")
-    WebElement textContainer;
-    /*
-    public String forceGetText(WebElement element) {
-        wait.until(ExpectedConditions.visibilityOf(element));
-        try {
-            return (String) jsExecutor.executeScript(
-                    "return (arguments[0].textContent || arguments[0].innerText || '').trim();",
-                    element
-            );
-        } catch (Exception e) {
-            System.err.println("Error al obtener texto: " + e.getMessage());
-            return "";
-        }
-    }
-*/
     public void forceHover(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
         String script =

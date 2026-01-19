@@ -39,7 +39,7 @@ public class BrokenLinksImages extends BaseTest {
         String hrefLink = brokenLinksPage.getValidHref();
         Assert.assertNotNull(hrefLink, "El href del link es nulo");
         int statusCode = brokenLinksPage.getStatusCode(hrefLink);
-        Assert.assertEquals(statusCode ,301, "El link inválido debería retornar un código (4xx o 5xx)");
+        Assert.assertEquals(statusCode ,statusCode >= 400 , "El link inválido debería retornar un código (4xx o 5xx)");
         brokenLinksPage.clickOnBrokenLink();
         Assert.assertEquals(brokenLinksPage.getCurrentUrl(), "https://the-internet.herokuapp.com/status_codes/500" , "No se navegó correctamente después de hacer clic en el link roto");
     }

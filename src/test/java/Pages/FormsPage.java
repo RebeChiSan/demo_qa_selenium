@@ -86,18 +86,8 @@ public class FormsPage extends BasePage {
 	}
 
     public void setDateInput(String date) {
-        /*sExecutor.executeScript("arguments[0].value = '';", dateOfBirthInput);
-
-        // 2. Disparamos el evento 'input' para que React sepa que cambió
-        jsExecutor.executeScript("arguments[0].dispatchEvent(new Event('input', { bubbles: true }));", dateOfBirthInput);
-        dateOfBirthInput.sendKeys(Keys.chord(Keys.CONTROL, "a"));
-        //typeSlowly(dateOfBirthInput, date);
-        //dateOfBirthInput.sendKeys(Keys.ENTER);
-        */
         dateOfBirthInput.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.BACK_SPACE ));
         typeSlowly(dateOfBirthInput, date);
-        //dateOfBirthInput.sendKeys(Keys.ENTER);
-
     }
 
     public void waitForModalToAppear() {
@@ -108,22 +98,15 @@ public class FormsPage extends BasePage {
         clickWithJs(dateOfBirthInput);
         Select yearDropdown = new Select(selectYear);
         yearDropdown.selectByValue(yearValue);
-
         Select monthDropdown = new Select(selectMonth);
         monthDropdown.selectByValue(monthValue);
-
-        // 3. Seleccionar el Día
-        // Usamos un selector que busque la clase del día específico pero que NO sea de otro mes (outside-month)
-        // El formato de la clase es react-datepicker__day--016 para el día 16
         String formattedDay = String.format("%03d", Integer.parseInt(day)); // Convierte "16" en "016"
 
         String daySelector = String.format(
                 ".react-datepicker__day--%s:not(.react-datepicker__day--outside-month)",
                 formattedDay
         );
-
         WebElement dayElement = driver.findElement(By.cssSelector(daySelector));
-
         executeJS("arguments[0].click();", dayElement);
     }
 	
